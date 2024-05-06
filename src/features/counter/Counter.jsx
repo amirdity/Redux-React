@@ -30,7 +30,7 @@ function Counter() {
         onClick={() => dispatch(reset())}
         className="bg-rose-500 rounded-full p-2 m-2"
       >
-        0
+        reset
       </button>
       <button
         onClick={() => dispatch(incrementByAmount())}
@@ -43,6 +43,8 @@ function Counter() {
         value={incrementAmount}
         onChange={(e) => setIncrementAmount(e.target.value)}
       />
+      <button onClick={()=>dispatch(incrementByAmount(addValue))}> add amount </button>
+      <button onClick={resetAll}> reset </button>
     </section>
   );
 }
